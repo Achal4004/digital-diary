@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.navbar-brand  {
+    font-family: 'Dancing Script',cursive;
+    font-family: 'Courgette', cursive;
+    font-size:x-large;
+    font-weight: 500;
+}
+nav .navbar-brand span.short {
+    display: none;
+}
+nav .navbar-brand img {
+    height:48px;
+}
+button[data-target="#changePasswordModal"]:hover {
+    background-color:#f8f9fa;
+    color:inherit;
+    outline: none;
+}
+@media (max-width: 992px) {
+    nav li a.btn{
+        margin-top: 16px;
+    }
+}
+@media (max-width: 530px) {
+    nav .navbar-brand span.short {
+        display: inline-block;
+    }
+    nav .navbar-brand span.long {
+        display: none;
+    }
+}

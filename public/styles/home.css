@@ -1,0 +1,47 @@
+.welcome {
+    padding:3rem;
+}
+.welcome p {
+    color:#aaa;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.alert {
+    text-align: center;
+}
+main{
+    font-family: 'Courgette', cursive;
+}
+main p {
+    font-size: large;
+}
+.article{
+    padding:0 32px;
+    margin-bottom:24px;
+    margin-top: 24px;
+}
+.article span {
+    color:#aaa;
+}
+.article p {
+    color:#555;
+}
+@media(max-width: 989px) {
+    .welcome p {
+        font-size: 3rem;
+    }
+    .modalbtn {
+        margin-right: 16px !important;
+    }
+}
+@media(max-width: 420px) {
+    .p1,.p1~span,.d1 {
+      display:inline-block;
+      font-size: 20px !important;
+      margin-top: 4px !important;
+    }
+    .welcome p {
+      font-size: 2rem;
+    }
+}

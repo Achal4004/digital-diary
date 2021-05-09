@@ -1,0 +1,14 @@
+<%- include('./partial/head',{css_arr:["/styles/footer.css","/styles/login.css"]}) %>
+<main class="text-center">
+    <form class="form-signin" action=<%= action%> method="POST">
+      <img class="mb-2" src="../images/logo.png" alt="logo" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Enter OTP</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required value="<%= email %> " hidden>
+      <label for="otp" class="sr-only">OTP</label>
+      <input name="otp" type="text" id="otp" class="form-control" placeholder="" required minlength="6" maxlength="6" autofocus autocomplete="off" style="border-radius:0.25rem;">
+      <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Submit</button>
+      <div class="mt-2"><a href="/" style="text-decoration: none;">Back to Home</a></div> 
+    </form>
+</main>
+<%- include('./partial/footer') %>

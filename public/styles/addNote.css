@@ -1,0 +1,73 @@
+body {
+  background-color: rgba(0,0,0,0.1);
+}
+#paper {
+  width: 80%;
+  min-height: 540px;
+  position: relative;
+  margin: 36px auto 0px;
+  padding-top: 40px;
+  padding-bottom: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+#paper::before {
+  content: '';
+  width: 6px;
+  border:2px solid rgba(255,0,0,0.6);
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+#content {
+  padding-top: 6px;
+  padding-left: 124px;
+  padding-right: 28px;
+  line-height: 25px;
+  font-family: 'Courgette', cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  text-align: justify;
+}
+#content {
+    padding-top: 6px;
+    padding-left: 124px;
+    padding-right: 28px;
+    line-height: 25px;
+    font-family: 'Courgette', cursive;
+    font-size: 19px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    text-align: justify;
+}
+#diary-note{
+    border:none;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #495057;
+    text-indent: 25px;
+}
+@media (max-width:800px) {
+    #paper::before {
+        left: 12%;
+      }
+    #content {
+        padding-left:15%;
+    }
+}
+@media (max-width:680px) {
+    #paper::before {
+        left: 14%;
+      }
+    #content {
+        padding-left:20%;
+    }
+}

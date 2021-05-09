@@ -1,0 +1,27 @@
+<%- include ('./partial/head',{css_arr:["/styles/nav1.css","/styles/footer.css",'/styles/addNote.css']}) %>
+<%- include('./partial/nav2'),{email:email} %>
+<div id="paper">
+    <div id="content">
+        <form id="note" action="/addNote" method="POST">
+            <h2>Dear Diary,</h2>
+            <input type="hidden" name="heading" id="heading">
+            <textarea  name="note" id="diary-note" cols="30" rows="10" required minlength="410" autofocus value="" spellcheck="false"></textarea>
+            <div class="modal-footer mt-5" >
+              <a href="/" class="btn btn-secondary text-light">Back</a>
+              <button type="submit" class="btn btn-success">Add Note</button>
+              </div>
+            </div>
+          </form>
+      </div>
+  </div>
+  <script>
+      document.getElementById('note').addEventListener('submit',(event)=>{
+        event.preventDefault();
+        let heading=prompt("Enter the Heading");
+        if(heading!=null) {
+            document.getElementById("heading").value=heading;
+            event.target.submit();
+        }
+      });
+  </script>
+<%- include('./partial/footer') %>

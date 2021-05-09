@@ -1,0 +1,35 @@
+.diary {
+    padding: 16px 50px 16px 24px;
+    text-align: justify;
+}
+.diary h1 {
+    text-transform: capitalize;
+}
+.diary div {
+    display: flex;
+    justify-content: space-between;
+    line-height: 48px;
+}
+/* .password {
+    width: fit-content;
+    padding:24px 24px 8px;
+    margin: 64px auto;
+    max-width: 100vw;
+    overflow-x: scroll;
+}
+.password p {
+    font-size: large;
+}
+.password h5 {
+    width: 135px;
+    white-space: nowrap;
+}
+.password div {
+    display: flex;
+}
+::-webkit-scrollbar {
+    display: none;
+} */
+.hide {
+    display: none;
+}

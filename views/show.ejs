@@ -1,0 +1,31 @@
+<%- include ('./partial/head',{css_arr:["/styles/nav1.css","/styles/footer.css","/styles/home.css","/styles/show.css"]}) %>
+<%- include('./partial/nav2'),{email:email} %> 
+<main>
+    <%- include('./partial/changePasswordModal')%> 
+    <div class="diary" ondblclick="showButton()">
+        <div>
+            <h1><%=data.header%></h1>
+            <p style="text-indent: 25px;"><%=data.date.toString().substring(4,16)%></p>
+        </div>
+        <h4 style="opacity: 90%;">Dear Diary,</h4>
+        <p style="opacity: 90%;"><%=data.content%></p>
+    </div>
+    <p><button id="delete" onclick='deleteNote()'class="btn btn-outline-danger btn-large ml-4 hide"><i class="fa fa-trash mr-1"></i> Delete Note</button></p>
+</main>
+<% var id =data._id; %>
+<script>
+    function showButton() {
+        document.getElementById('delete').classList.remove('hide');
+    }
+    function deleteNote(event) {
+        let getId="<%= id  %>"
+        let flag=confirm('Are you sure to delete this Note.');
+        if (flag) 
+        {
+            window.location="http://localhost:3000/delete/note/"+getId;
+        }else {
+            document.getElementById('delete').classList.add('hide');
+        }    
+    }
+</script>
+<%- include('./partial/footer') %>

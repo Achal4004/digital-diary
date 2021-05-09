@@ -1,0 +1,23 @@
+<%- include ('./partial/head',{css_arr:["/styles/nav1.css","/styles/footer.css","/styles/home.css"]}) %>
+<%- include('./partial/nav2'),{email:email} %> 
+<main>
+    <%- include('./partial/changePasswordModal')%> 
+    <hr style="margin-top: 0;">
+    <%- include('./partial/flash.ejs')%> 
+    <% if (dlist.length==0) { %>
+     <div class="welcome">
+         <p>Welcome User</p><p>Add Passwords or Notes.</p>
+     </div>
+    <% } else { %>
+        <% for( let index = dlist.length-1; index >=0; index-- ) { %>
+            <div class="article">
+                <h2><%= dlist[index].header %></h2>
+                <p><span><%= dlist[index].date.toString().substring(3,16) %></span></p>
+                <p><%= dlist[index].subContent%>...<br><a href="/note/<%=dlist[index]._id%>" class="btn btn-outline-secondary btn-large mt-3 mb-1">Read More</a></p>
+                <hr>
+              </div>
+              <% } %>
+    <% } %>
+</main>
+<%- include('./partial/footer') %>
+

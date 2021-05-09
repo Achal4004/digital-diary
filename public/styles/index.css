@@ -1,0 +1,36 @@
+main {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Courgette', cursive;
+    user-select: none; 
+}
+main div {
+    width:40%;
+}
+main div img {
+    width: 95%;
+}
+main div h1 {
+    font-size: 48px;
+    opacity:80%;
+}
+main div p {
+    font-size: 24px;
+    opacity:80%;
+}
+@media(max-width: 1119px) {
+    main {
+        flex-direction: column;
+    }
+    main div{
+        padding: 24px 10%;
+        text-align: center;
+        width:100%;
+    }
+}
+@media(max-width:630px) {
+    main img {
+        width: 80%;
+    }
+}

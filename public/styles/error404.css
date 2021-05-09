@@ -1,0 +1,9 @@
+body {
+background: #dedede;
+}
+.page-wrap {
+    min-height: 100vh;
+}
+a:hover {
+    text-decoration: none !important;
+}

@@ -1,0 +1,16 @@
+footer p {
+    /* background-color:#f8f9fa ; */
+    text-align: center;
+    padding:16px;
+    margin-bottom: 0px;
+}
+footer a{  
+    color:#777;
+    font-size:small;
+    cursor:pointer;
+    transition:0.4s;
+}
+footer a:hover {
+    color:#333;
+    text-decoration: none;
+}

@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        <img src="/images/logo.png" alt="logo">
+        <span class="short">Digital Diary</span><span class="long">Digital Diary</span> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto mr-5">
+        <li class="nav-item mr-3 active">
+          <a class="nav-link" href="/addNote"><i class="fa 	fa fa-pencil-square mr-2"></i>Add Note</a>
+        </li>
+        <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user mr-2" style="font-size: larger;color:#555;"></i><span><%=email%></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <button type="button" class="dropdown-item" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+              <hr>
+              <a class="dropdown-item" href="/logout">LogOut</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+</nav>
